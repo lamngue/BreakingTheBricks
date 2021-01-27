@@ -1,9 +1,10 @@
-package main;
+import com.game.BrickPanel;
+import com.game.StartPanel;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class Main {
+public class Game {
 
     public static JLabel getLabel(String text, int alignment) {
         JLabel l = new JLabel(text, alignment);

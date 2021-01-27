@@ -1,4 +1,4 @@
-package main;
+package com.game;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,7 +16,7 @@ public class BrickPanel extends JPanel implements KeyListener {
     Thread thread;
     Integer destroys = 0;
 
-    BrickPanel(JFrame startFrame, JFrame brickFrame) {
+    public BrickPanel(JFrame startFrame, JFrame brickFrame) {
         this.startFrame = startFrame;
         this.brickFrame = brickFrame;
         reset();

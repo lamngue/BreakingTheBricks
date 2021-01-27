@@ -1,4 +1,4 @@
-package main;
+package com.game;
 
 import javax.swing.*;
 import java.awt.event.KeyEvent;
@@ -8,7 +8,7 @@ public class StartPanel extends JPanel implements KeyListener {
 
     JFrame brickFrame;
     JFrame startFrame;
-    StartPanel(JFrame startFrame, JFrame brickFrame) {
+    public StartPanel(JFrame startFrame, JFrame brickFrame) {
         this.brickFrame = brickFrame;
         this.startFrame = startFrame;
         addKeyListener(this);
