@@ -24,7 +24,6 @@ public class Game {
         startFrame.setSize(500, 600);
         startFrame.getContentPane().add(startPanel);
         startFrame.setVisible(true);
-        startFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         startFrame.setResizable(false);
 
 

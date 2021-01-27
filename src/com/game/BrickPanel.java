@@ -57,8 +57,8 @@ public class BrickPanel extends JPanel implements KeyListener {
         ball.y += ball.movY;
 
         if (ball.y > getHeight() || destroys == blocks.size()) {
-            thread = null;
             reset();
+            thread = null;
             this.brickFrame.setVisible(false);
             this.startFrame.setVisible(true);
         }
