@@ -15,6 +15,7 @@ public class BrickPanel extends JPanel implements KeyListener {
     JFrame brickFrame;
     Thread thread;
     Integer destroys = 0;
+    Integer countEnter = 0;
 
     public BrickPanel(JFrame startFrame, JFrame brickFrame) {
         this.startFrame = startFrame;
@@ -36,6 +37,7 @@ public class BrickPanel extends JPanel implements KeyListener {
             blocks.add(new Block((i*60 + 2),100,60,60, "red.png"));
         }
         destroys = 0;
+        countEnter = 0;
         addKeyListener(this);
         setFocusable(true);
     }
@@ -75,7 +77,8 @@ public class BrickPanel extends JPanel implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+        if (e.getKeyCode() == KeyEvent.VK_ENTER && countEnter == 0) {
+            countEnter++;
             thread = new Thread(() -> {
                 while (true) {
                     update();
