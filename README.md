@@ -8,3 +8,7 @@ Simply clone the repo, open command line, go to the src folder of the project an
 to compile the file and run
 
 `java -cp . Game`
+
+This is a little screenshot of the game.
+![image](https://user-images.githubusercontent.com/34784901/106020791-b207a980-60f6-11eb-905f-304a042da7d4.png)
+
