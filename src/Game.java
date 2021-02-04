@@ -21,7 +21,7 @@ public class Game {
         startPanel.add(getLabel(
                 "Press enter to start", SwingConstants.CENTER), BorderLayout.CENTER);
 
-        startFrame.setSize(500, 600);
+        startFrame.setSize(600, 700);
         startFrame.getContentPane().add(startPanel);
         startFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         startFrame.setVisible(true);
@@ -31,7 +31,7 @@ public class Game {
         brickFrame.getContentPane().add(brickPanel);
         brickFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         brickFrame.setVisible(false);
-        brickFrame.setSize(500, 600);
+        brickFrame.setSize(700, 800);
         brickFrame.setResizable(false);
     }
 }

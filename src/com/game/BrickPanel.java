@@ -25,16 +25,16 @@ public class BrickPanel extends JPanel implements KeyListener {
 
     public void reset() {
         blocks = new ArrayList<Block>();
-        ball = new Block(220, 435, 35, 25, "ball.png");
-        paddle = new Block(215,480, 1000, 50,"paddle.png");
+        ball = new Block(320, 600, 35, 25, "ball.png");
+        paddle = new Block(320,650, 1000, 50,"paddle.png");
         for (int i = 0;i<8;i++) {
-            blocks.add(new Block((i*60 + 2),0,60,60, "blue.png"));
+            blocks.add(new Block((i*60 + 100),0,60,60, "blue.png"));
         }
         for (int i = 0;i<8;i++) {
-            blocks.add(new Block((i*60 + 2),50,60,60, "green.png"));
+            blocks.add(new Block((i*60 + 100),50,60,60, "green.png"));
         }
         for (int i = 0;i<8;i++) {
-            blocks.add(new Block((i*60 + 2),100,60,60, "red.png"));
+            blocks.add(new Block((i*60 + 100),100,60,60, "red.png"));
         }
         destroys = 0;
         countEnter = 0;
@@ -59,8 +59,8 @@ public class BrickPanel extends JPanel implements KeyListener {
         ball.y += ball.movY;
 
         if (ball.y > getHeight() || destroys == blocks.size()) {
-            reset();
             thread = null;
+            reset();
             this.brickFrame.setVisible(false);
             this.startFrame.setVisible(true);
         }
@@ -106,9 +106,9 @@ public class BrickPanel extends JPanel implements KeyListener {
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        blocks.forEach(block -> {
-            block.draw(g, this);
-        });
+        for (int i = 0; i< blocks.size(); i++) {
+            blocks.get(i).draw(g, this);
+        }
         ball.draw(g, this);
         paddle.draw(g, this);
     }
